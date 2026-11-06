@@ -17,7 +17,7 @@ console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
 // TODO: Log the result of calling describe().
 const myTruck = {
-name: "Alex's Taco Truck",
+name: "Alex's Coffee Truck",
 
 describe: function() {
 return "Welcome to " + this.name + "!";
@@ -29,7 +29,7 @@ console.log("My truck:", myTruck.describe());
 // ---------- Step 2: Compare with an arrow function ----------
 // Example:
 const exampleArrowTruck = {
-  name: "Taco Rocket",
+  name: "Ale's Coffee Truck",
   describe: () => {
     return "Welcome to " + this.name + "!";
   },
@@ -57,7 +57,7 @@ console.log("Step 3 object:", exampleParsed);
 console.log("Step 3 price:", exampleParsed.price);
 
 // TODO: Write a JSON string for one of YOUR menu items. Parse it. Log one property.
-const myMenuJson = '{"name": "Tacos", "price": 4.5}';
+const myMenuJson = '{"name": "Coffee", "price": 3}';
 
 const myMenuParsed = JSON.parse(myMenuJson);
 
