@@ -16,7 +16,7 @@ console.log(typeof exampleName);     // typeof tells you the type
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
 // TODO: console.log them, and log the typeof each one.
 
-const truckName = "Alex's Taco Truck";
+const truckName = "Alex's Coffee Truck";
 const truckNumber = 5;
 const truckIsOpen = true;
 
@@ -34,7 +34,7 @@ console.log(exampleMenu.length);     // how many items
 
 // TODO: Make an array of 3 or more things YOUR truck sells.
 // TODO: Log the first item, the last item, and how many items there are.
-const truckMenu = ["Tacos", "Burritos", "Nachos", "Quesadillas"];
+const truckMenu = ["Coffee", "Latte", "Cappuccino", "Iced Coffe"];
 
 console.log(truckMenu[0]);
 console.log(truckMenu[truckMenu.length - 1]);
@@ -48,14 +48,15 @@ console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
 // TODO: Log one property with dot notation and one with bracket notation.
-const taco = {
-name: "Tacos",
-price: 4.50,
-spicy: true
+const coffee = {
+name: "Coffee",
+price: 3.00,
+spicy: false
 };
 
-console.log(taco.name);
-console.log(taco["price"]);
+console.log(coffee.name);
+console.log(coffee["price"]);
+
 
 // ---------- Step 4: A function ----------
 // Example:
