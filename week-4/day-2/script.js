@@ -11,22 +11,15 @@ const menu = [
 const area = document.getElementById("card-area");
 
 
-// ---------- Example: ONE card ----------
+// -------- Step 1 and Step 2 --------
+menu.forEach((item) => {
 const card = document.createElement("div");
-card.className = "card p-3";          // Bootstrap classes, set from JavaScript
-card.textContent = menu[0].name;
+card.className = "card p-3 bg-light shadow-sm";
+card.textContent = `${item.name} - $${item.price.toFixed(2)}`;
 area.appendChild(card);
+});
 
 
-// ---------- Step 1 ----------
-// TODO: Use forEach to make a card for EVERY menu item, showing its name and price.
-// Then delete the example card code above.
-
-
-// ---------- Step 2 ----------
-// TODO: Add more Bootstrap classes to each card, for example:
-//   "card p-3 text-center border-primary"   or   "card p-3 bg-light shadow-sm"
-// Save and watch the page change.
 
 
 // ---------- Extra practice (if you finish early) ----------

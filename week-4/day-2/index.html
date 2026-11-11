@@ -19,10 +19,10 @@
     <!-- ========== Layout 1: stack on phones, a row on bigger screens ========== -->
     <h2 class="mt-5">Layout 1: How to order</h2>
     <!-- TODO: give the div below these classes: d-flex flex-column flex-md-row gap-3 -->
-    <div class="">
-      <div class="p-4 bg-primary text-white">1. Order</div>
-      <div class="p-4 bg-success text-white">2. Pay</div>
-      <div class="p-4 bg-warning">3. Eat</div>
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <div class="p-4 bg-primary text-white">1. Choose your food</div>
+      <div class="p-4 bg-success text-white">2. Place your order</div>
+      <div class="p-4 bg-warning">3. Enjoy your meal</div>
     </div>
     <!-- TODO: change the three steps to fit YOUR truck. -->
 
@@ -33,14 +33,18 @@
          both lined up in the middle (top to bottom).
          Classes you'll need: d-flex  justify-content-between  align-items-center
          Give it a background and padding so you can see it: bg-dark text-white p-3 -->
-
+<div class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+<span class="fw-bold">My Food Truck</span>
+<a href="#" class="btn btn-warning">Order now</a>
+</div>
 
 
     <!-- ========== Compare ========== -->
     <h2 class="mt-5">Framework vs plain CSS</h2>
     <!-- TODO: write 1–2 sentences: what was easier with Bootstrap classes?
          What would you have written in style.css instead? -->
-    <p></p>
+    <p>Bootstrap makes styling easier because it provides ready-made classes. With plain CSS, we would have to write the styles ourselves in a separate CSS file.</p>
+
   </main>
 
   <script src="script.js"></script>
