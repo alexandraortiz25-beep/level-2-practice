@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 4 Day 1 — map Warm-up</title>
-  <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Truck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-  <h1>Week 4 Day 1 — map Warm-up</h1>
-  <p class="tip">Open the <strong>console</strong> too: right-click → <strong>Inspect</strong> → <strong>Console</strong>.</p>
-  <p><a href="../../index.html">← All practice days</a></p>
+ <header class="bg-warning text-center py-5">
+<h1 class="display-4 fw-bold">My Food Truck</h1>
+<p class="lead">Fresh food made with love!</p>
+<a href="#menu" class="btn btn-dark btn-lg">See the menu</a>
+</header> 
 
-  <h2>Menu labels</h2>
-  <ul id="menu-list"></ul>
+<main class="container py-5">
+    <section id="menu">
+        <h2 class="text-center mb-4">Our Menu</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h3 class="card-title h5">Tacos</h3>
+                    <p class="card-text">Delicious fresh tacos with your choice of toppings.</p>
+                    <p class="fw-bold text-success mb-0">$4.50</p>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h3 class="card-title h5">Burgers</h3>
+                    <p class="card-text">Juicy grilled burgers with fresh ingredients.</p>
+                    <p class="fw-bold text-success mb-0">$8.50</p>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h3 class="card-title h5">Loaded Fries</h3>
+                    <p class="card-text">Crispy fries topped with cheese and bacon.</p>
+                    <p class="fw-bold text-success mb-0">$6.50</p>
+                </div>
+            </div>
+        </div>
+ </div>
+    </section>
+</main>  
 
-  <script src="script.js"></script>
 </body>
 </html>
