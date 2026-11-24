@@ -7,8 +7,8 @@
 //   2. Copy it under YOUR TURN, or change it where the comment says.
 
 // First: put YOUR truck's city here. Get the numbers from your "Find my city" request.
-const latitude = 30.27;
-const longitude = -97.74;
+const latitude = 30.23853;
+const longitude = -90.9201;
 
 // The same address you sent in your API tool, built from the pieces.
 const url =
@@ -27,6 +27,8 @@ async function getWeather() {
   // ---------- Step 2: Dig out one value ----------
   // EXAMPLE: the body is an object. Use dots to walk into it, like in your API tool's body view.
   console.log("Temperature:", data.current.temperature_2m);
+  console.log("Wind:", data.current.wind_speed_10m);
+
 
   // YOUR TURN: log the wind speed. Find its name in the console's object first.
 
@@ -35,7 +37,9 @@ async function getWeather() {
   // EXAMPLE: the number, plus its unit (the unit lives in current_units).
   const weather = document.getElementById("weather");
   weather.textContent = "Temperature: " + data.current.temperature_2m + " " +
-    data.current_units.temperature_2m;
+      data.current_units.temperature_2m +
+      ". Wind: " + data.current.wind_speed_10m + " " +
+      data.current_units.wind_speed_10m;
 
   // YOUR TURN: don't copy this one. Change the example above,
   // so the page also shows the wind speed and its unit.
