@@ -9,19 +9,25 @@ const recipeArea = document.getElementById("recipe");
 
 
 async function loadRecipe() {
-  const url = "https://dummyjson.com/recipes/" + input.value;
+  try {
+      const url = "https://dummyjson.com/recipes/" + input.value;
 
   recipeArea.textContent = "";   // clear the old recipe first
 
   // ---------- Step 2 goes here (loading message) ----------
+  statusText.textContent = "Loading...";
 
 
   const response = await fetch(url);
 
   // ---------- Step 3 goes here (no recipe with that number) ----------
 
-
+  if (!response.ok) {
+  statusText.textContent = "No recipe with that number. Try 1 to 50.";
+  return;
+  }
   const recipe = await response.json();
+  statusText.textContent = "";
   console.log(recipe);   // look at ALL the fields in the console, then pick a few
 
   // ---------- Step 1: show a few fields ----------
@@ -34,7 +40,18 @@ async function loadRecipe() {
   title.textContent = recipe.name;
   card.appendChild(title);
 
+  const cuisine = document.createElement("p");
+  cuisine.textContent = "Cuisine: " + recipe.cuisine;
+  card.appendChild(cuisine);
+
+  const prepTime = document.createElement("p");
+  prepTime.textContent = "Ready in " + recipe.prepTimeMinutes + " minutes";
+  card.appendChild(prepTime);
+
   recipeArea.appendChild(card);
+  } catch (error) {
+  statusText.textContent = "Can't reach the recipe server. Check your internet.";
+  }
 
   // YOUR TURN: add 2 more fields to the card, under the title. For example:
   //   a <p> with the cuisine:           "Cuisine: Italian"
